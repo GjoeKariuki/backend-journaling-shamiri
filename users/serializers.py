@@ -52,7 +52,7 @@ class GetUserSerializer(serializers.ModelSerializer):
 
 class ChangePasswordSerializer(serializers.Serializer):
     old_password = serializers.CharField(required=True, trim_whitespace=False)
-    new_password = serializers.CharField(requried=True, trim_whitespace=False)
+    new_password = serializers.CharField(required=True, trim_whitespace=False)
 
     
 

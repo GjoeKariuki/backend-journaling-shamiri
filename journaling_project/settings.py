@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     # third parties
     'rest_framework',
     'knox',
-    'corsheader',
+    'corsheaders',
     'drf_yasg',
 
 ]
@@ -103,11 +103,11 @@ WSGI_APPLICATION = 'journaling_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME', 'Journals'),
-        'USER': config('DB_USER','postgres'),
-        'PASSWORD': config('DB_PASSWORD','@2024#ND'),
-        'HOST': config('DB_HOST','dbd'),
-        'PORT': config('DB_PORT', '5432'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT',),
     }
 }
 
