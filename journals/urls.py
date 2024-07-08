@@ -1,5 +1,5 @@
 from django.urls import path
-from journals.views import journal_detail,journal_list
+from journals.views import journal_detail,journal_list, journal_summary
 
 
 
@@ -7,7 +7,7 @@ from journals.views import journal_detail,journal_list
 
 urlpatterns = [
         path('journal_list/', journal_list,name="journals"),
-        path('journal_detail/<str:pk>/',journal_detail, name="journaldetails")
-
+        path('journal_detail/<str:pk>/',journal_detail, name="journaldetails"),
+        path('journal_summary/',journal_summary, name="journalsummary"),
 ]
 
