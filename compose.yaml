@@ -1,12 +1,22 @@
+networks:
+  letsencrypt:
+    external: true
+  octo:
+
 services:
-  server:
-    build:
-      context: .
+  journalsAPI:
+    image: jojiz/backend-journaling-shamiri:latest
+    container_name: journals-app-backend
     ports:
       - "8000:80"
-    container_name: journals-app-backend
+    environment:
+      - VIRTUAL_PORT=80
+      - VIRTUAL_HOST=api.journals.com
+      - LETSENCRYPT_HOST=api.journals.com
     env_file:
       - .env
+    networks:
+      - octo
     volumes:
       - ./core/user/database/:/app/core/user/database
     depends_on:
@@ -14,36 +24,52 @@ services:
         condition: service_healthy
 
   db:
-    image: postgres
     restart: always
-    user: postgres
-    secrets:
-      - db-password
+    image: postgres
+    container_name: cont-postgres
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=example
-      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
-    expose:
-      - 5432
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_PORT=${DB_PORT}
+    ports:
+      - "5432:5432"
+    networks:
+      - octo
     healthcheck:
       test: ["CMD", "pg_isready"]
       interval: 10s
       timeout: 5s
       retries: 5
 
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@root.com
+      PGADMIN_DEFAULT_PASSWORD: root
+      # PGADMIN_LISTEN_PORT: 80
+    ports:
+      - "5051:80"
+    networks:
+      - octo
+
   nginx:
     image: nginx:latest
     container_name: nginx-container
     volumes:
       - ./nginx/:/etc/nginx/conf.d
+      - /etc/letsencrypt:/etc/letsencrypt
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
-      - server
+      - journalsAPI
+    networks:
+      - octo
 
 volumes:
-  db-data:
-secrets:
-  db-password:
-    file: db/password.txt
+  postgres_data:
