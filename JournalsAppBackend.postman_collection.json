@@ -1,0 +1,2096 @@
+{
+	"info": {
+		"_postman_id": "26819167-1f71-40f9-99b2-d25e4e876fc9",
+		"name": "JournalsAppBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32461940"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/register/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:01:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"password\": [\n        \"This field may not be null.\"\n    ],\n    \"email\": [\n        \"This field may not be null.\"\n    ]\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:35:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"851c82a7-5e8d-462b-9d07-01c68e7cf63a\",\n    \"last_login\": null,\n    \"is_superuser\": false,\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2024-07-08T09:35:50.170176Z\",\n    \"email\": \"bravoJohn@gmail.com\",\n    \"groups\": [],\n    \"user_permissions\": []\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:53:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\",\n    \"last_login\": null,\n    \"is_superuser\": false,\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2024-07-08T09:53:36.476999Z\",\n    \"email\": \"bravoJohn@gmail.com\",\n    \"groups\": [],\n    \"user_permissions\": []\n}"
+						},
+						{
+							"name": "Register user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://entris.cintelcoreams.com/api/register/",
+									"protocol": "https",
+									"host": [
+										"entris",
+										"cintelcoreams",
+										"com"
+									],
+									"path": [
+										"api",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 10:24:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"adb193c7-7968-4fba-b896-5ffcf8232c3f\",\n    \"last_login\": null,\n    \"is_superuser\": false,\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2024-07-09T10:24:26.450623Z\",\n    \"email\": \"bravoJohn@gmail.com\",\n    \"groups\": [],\n    \"user_permissions\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/login/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:05:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": [\n        \"This field is required.\"\n    ],\n    \"password\": [\n        \"This field is required.\"\n    ]\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:05:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"03a4b0bd-bf62-454d-aea8-1d21ea42ae46\",\n        \"password\": \"pbkdf2_sha256$720000$owfZa0VCWzA1prRuJrfdPM$uJUYUrc4KbeCJiW+6/6vL6TOvUsOdh1Ea7g6+EsxUpY=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2024-07-08T09:03:05.615441Z\",\n        \"email\": \"bravoJohn@gmail.com\",\n        \"groups\": [],\n        \"user_permissions\": []\n    },\n    \"token\": \"9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:36:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"851c82a7-5e8d-462b-9d07-01c68e7cf63a\",\n        \"password\": \"pbkdf2_sha256$720000$GTFpCOuOINlpoXZqxSR5iW$wWLsamQqfCun7OknG1hwxycInhu+OmrLf/ltbkvXI4M=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2024-07-08T09:35:50.170176Z\",\n        \"email\": \"bravoJohn@gmail.com\",\n        \"groups\": [],\n        \"user_permissions\": []\n    },\n    \"token\": \"6194d7ba5692f727ac0ec9f2899a209f5ac23d2c03188bc6afa1630eb78eeeae\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:53:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\",\n        \"password\": \"pbkdf2_sha256$720000$2yxFryNdtTGJHwBDnuiIlb$FpT19BtF09jzLssaGHm3+H/lopIoOuxz8+4uyN3iCDA=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2024-07-08T09:53:36.476999Z\",\n        \"email\": \"bravoJohn@gmail.com\",\n        \"groups\": [],\n        \"user_permissions\": []\n    },\n    \"token\": \"0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b\"\n}"
+						},
+						{
+							"name": "Login user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"1234-Ba@\",\r\n    \"email\": \"bravoJohn@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://entris.cintelcoreams.com/api/login/",
+									"protocol": "https",
+									"host": [
+										"entris",
+										"cintelcoreams",
+										"com"
+									],
+									"path": [
+										"api",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jul 2024 10:24:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"adb193c7-7968-4fba-b896-5ffcf8232c3f\",\n        \"password\": \"pbkdf2_sha256$720000$TuxPXDgmcyT5HjQJYuHuhj$K/KV7m1AUsR+9BoyhkxuDs+6Y5jiI05rSKW1xZ2aWbY=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2024-07-09T10:24:26.450623Z\",\n        \"email\": \"bravoJohn@gmail.com\",\n        \"groups\": [],\n        \"user_permissions\": []\n    },\n    \"token\": \"342b81b7c1584d03f043661398fe9c4499b3aef41db4a00346fba819b0495b6f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 342b81b7c1584d03f043661398fe9c4499b3aef41db4a00346fba819b0495b6f"
+							}
+						],
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/user/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": ""
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:06:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Basic realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:07:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "361"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"03a4b0bd-bf62-454d-aea8-1d21ea42ae46\",\n        \"password\": \"pbkdf2_sha256$720000$owfZa0VCWzA1prRuJrfdPM$uJUYUrc4KbeCJiW+6/6vL6TOvUsOdh1Ea7g6+EsxUpY=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2024-07-08T09:03:05.615441Z\",\n        \"email\": \"bravoJohn@gmail.com\",\n        \"groups\": [],\n        \"user_permissions\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Fetch specific user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+							}
+						],
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/user/03a4b0bd-bf62-454d-aea8-1d21ea42ae46/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"03a4b0bd-bf62-454d-aea8-1d21ea42ae46",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/03a4b0bd-bf62-454d-aea8-1d21ea42ae46/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"03a4b0bd-bf62-454d-aea8-1d21ea42ae46",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:09:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, GET, OPTIONS, DELETE"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "359"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03a4b0bd-bf62-454d-aea8-1d21ea42ae46\",\n    \"password\": \"pbkdf2_sha256$720000$owfZa0VCWzA1prRuJrfdPM$uJUYUrc4KbeCJiW+6/6vL6TOvUsOdh1Ea7g6+EsxUpY=\",\n    \"last_login\": null,\n    \"is_superuser\": false,\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2024-07-08T09:03:05.615441Z\",\n    \"email\": \"bravoJohn@gmail.com\",\n    \"groups\": [],\n    \"user_permissions\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update user details",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Bravo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/user/03a4b0bd-bf62-454d-aea8-1d21ea42ae46/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"03a4b0bd-bf62-454d-aea8-1d21ea42ae46",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Bravo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/03a4b0bd-bf62-454d-aea8-1d21ea42ae46/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"03a4b0bd-bf62-454d-aea8-1d21ea42ae46",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:12:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, GET, OPTIONS, DELETE"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "368"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03a4b0bd-bf62-454d-aea8-1d21ea42ae46\",\n    \"password\": \"pbkdf2_sha256$720000$owfZa0VCWzA1prRuJrfdPM$uJUYUrc4KbeCJiW+6/6vL6TOvUsOdh1Ea7g6+EsxUpY=\",\n    \"last_login\": null,\n    \"is_superuser\": false,\n    \"first_name\": \"John\",\n    \"last_name\": \"Bravo\",\n    \"is_staff\": false,\n    \"is_active\": true,\n    \"date_joined\": \"2024-07-08T09:03:05.615441Z\",\n    \"email\": \"bravoJohn@gmail.com\",\n    \"groups\": [],\n    \"user_permissions\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Bravo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/user/03a4b0bd-bf62-454d-aea8-1d21ea42ae46/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"03a4b0bd-bf62-454d-aea8-1d21ea42ae46",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User change password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"1234-Ba@\",\r\n    \"new_password\": \"4321-Ba@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/api/change-password",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"api",
+								"change-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"old_password\": \"12334234234\",\r\n    \"new_password\": \"1234123dds\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/change-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"change-password"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:15:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Incorrect 'old_password'\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"old_password\": \"1234-Ba@\",\r\n    \"new_password\": \"4321-Ba@\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/change-password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"change-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:15:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sessionid=ng7yo9aim2n4dkn8q76d0gp72nqw3j4l; expires=Mon, 22 Jul 2024 09:15:50 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password changed successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "JOURNALS",
+			"item": [
+				{
+					"name": "Delete journal entry",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 9ebdeec93983ad4574c2d9e5c5207991321238883a27ef410db8956b477504ab"
+							}
+						],
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/journals/journal_detail/b79930f4-c0bf-4d95-a9bd-4c87846bc60a/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"journals",
+								"journal_detail",
+								"b79930f4-c0bf-4d95-a9bd-4c87846bc60a",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create journal entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"AFIA House Demo\",\r\n    \"category\": \"Upperhill\",\r\n    \"date\": \"2024-07-08\",\r\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/journals/journal_list/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"journals",
+								"journal_list",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"AFIA House Demo\",\r\n    \"category\": \"Upperhill\",\r\n    \"date\": \"2024-07-08\",\r\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/journals/journal_list/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"journals",
+										"journal_list",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:55:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b79930f4-c0bf-4d95-a9bd-4c87846bc60a\",\n    \"title\": \"AFIA House Demo\",\n    \"content\": null,\n    \"category\": \"Upperhill\",\n    \"date\": \"2024-07-08\",\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch journal entries",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/journals/journal_list/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"journals",
+								"journal_list",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/journals/journal_list/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"journals",
+										"journal_list",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:56:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "498"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"b79930f4-c0bf-4d95-a9bd-4c87846bc60a\",\n        \"user\": {\n            \"id\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\",\n            \"password\": \"pbkdf2_sha256$720000$2yxFryNdtTGJHwBDnuiIlb$FpT19BtF09jzLssaGHm3+H/lopIoOuxz8+4uyN3iCDA=\",\n            \"last_login\": null,\n            \"is_superuser\": false,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"is_staff\": false,\n            \"is_active\": true,\n            \"date_joined\": \"2024-07-08T09:53:36.476999Z\",\n            \"email\": \"bravoJohn@gmail.com\",\n            \"groups\": [],\n            \"user_permissions\": []\n        },\n        \"title\": \"AFIA House Demo\",\n        \"content\": null,\n        \"category\": \"Upperhill\",\n        \"date\": \"2024-07-08\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Fetch journal entry",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/journals/journal_detail/b79930f4-c0bf-4d95-a9bd-4c87846bc60a/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"journals",
+								"journal_detail",
+								"b79930f4-c0bf-4d95-a9bd-4c87846bc60a",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/journals/journal_detail/b79930f4-c0bf-4d95-a9bd-4c87846bc60a/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"journals",
+										"journal_detail",
+										"b79930f4-c0bf-4d95-a9bd-4c87846bc60a",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:58:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "DELETE, GET, PUT, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "496"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b79930f4-c0bf-4d95-a9bd-4c87846bc60a\",\n    \"user\": {\n        \"id\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\",\n        \"password\": \"pbkdf2_sha256$720000$2yxFryNdtTGJHwBDnuiIlb$FpT19BtF09jzLssaGHm3+H/lopIoOuxz8+4uyN3iCDA=\",\n        \"last_login\": null,\n        \"is_superuser\": false,\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"is_staff\": false,\n        \"is_active\": true,\n        \"date_joined\": \"2024-07-08T09:53:36.476999Z\",\n        \"email\": \"bravoJohn@gmail.com\",\n        \"groups\": [],\n        \"user_permissions\": []\n    },\n    \"title\": \"AFIA House Demo\",\n    \"content\": null,\n    \"category\": \"Upperhill\",\n    \"date\": \"2024-07-08\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update journal entry",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"content\":\"begin in at 14:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/journals/journal_detail/b79930f4-c0bf-4d95-a9bd-4c87846bc60a/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"journals",
+								"journal_detail",
+								"b79930f4-c0bf-4d95-a9bd-4c87846bc60a",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"content\":\"begin in at 14:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/journals/journal_detail/b79930f4-c0bf-4d95-a9bd-4c87846bc60a/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"journals",
+										"journal_detail",
+										"b79930f4-c0bf-4d95-a9bd-4c87846bc60a",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:59:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "DELETE, GET, PUT, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b79930f4-c0bf-4d95-a9bd-4c87846bc60a\",\n    \"title\": \"AFIA House Demo\",\n    \"content\": \"begin in at 14:00\",\n    \"category\": \"Upperhill\",\n    \"date\": \"2024-07-08\",\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Summary Journals",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"AFIA House Demo\",\r\n    \"category\": \"Upperhill\",\r\n    \"date\": \"2024-07-08\",\r\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://entris.cintelcoreams.com/journals/journal_list/",
+							"protocol": "https",
+							"host": [
+								"entris",
+								"cintelcoreams",
+								"com"
+							],
+							"path": [
+								"journals",
+								"journal_list",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"AFIA House Demo\",\r\n    \"category\": \"Upperhill\",\r\n    \"date\": \"2024-07-08\",\r\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/journals/journal_list/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"journals",
+										"journal_list",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jul 2024 09:55:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, GET, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b79930f4-c0bf-4d95-a9bd-4c87846bc60a\",\n    \"title\": \"AFIA House Demo\",\n    \"content\": null,\n    \"category\": \"Upperhill\",\n    \"date\": \"2024-07-08\",\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
