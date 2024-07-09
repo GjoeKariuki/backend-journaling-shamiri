@@ -1,3 +1,8 @@
+networks:
+  letsencrypt:
+    external: true
+  octo:
+
 services:
   journalsAPI:
     image: jojiz/backend-journaling-shamiri:latest
