@@ -68,8 +68,7 @@ This is a backend application built using Django that allows users to manage the
    ```
 6. Run migrations
    ```
-   python manage.py migrate users
-   python manage.py migrate journals
+   python manage.py migrate
    ```
 7. Start the server
    ```
