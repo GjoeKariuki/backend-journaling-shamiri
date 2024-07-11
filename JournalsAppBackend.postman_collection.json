@@ -1971,17 +1971,20 @@
 				},
 				{
 					"name": "Summary Journals",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
+								"value": "Token 88f40057c00b67bbc65b48815c9919887a5bb64ec27a4ef083bb725ceb7b6b29"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"AFIA House Demo\",\r\n    \"category\": \"Upperhill\",\r\n    \"date\": \"2024-07-08\",\r\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1989,7 +1992,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://entris.cintelcoreams.com/journals/journal_list/",
+							"raw": "https://entris.cintelcoreams.com/journals/journal_summary/?period=daily",
 							"protocol": "https",
 							"host": [
 								"entris",
@@ -1998,97 +2001,18 @@
 							],
 							"path": [
 								"journals",
-								"journal_list",
+								"journal_summary",
 								""
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "daily"
+								}
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Token 0fbfb85e47ee07e076b78ee78211966810ee53ab357cbfc0d2678f5d0c19343b"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"title\": \"AFIA House Demo\",\r\n    \"category\": \"Upperhill\",\r\n    \"date\": \"2024-07-08\",\r\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://127.0.0.1:8000/journals/journal_list/",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"journals",
-										"journal_list",
-										""
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Mon, 08 Jul 2024 09:55:03 GMT"
-								},
-								{
-									"key": "Server",
-									"value": "WSGIServer/0.2 CPython/3.11.3"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Vary",
-									"value": "Accept, origin"
-								},
-								{
-									"key": "Allow",
-									"value": "POST, GET, OPTIONS"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "DENY"
-								},
-								{
-									"key": "Content-Length",
-									"value": "175"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "same-origin"
-								},
-								{
-									"key": "Cross-Origin-Opener-Policy",
-									"value": "same-origin"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"b79930f4-c0bf-4d95-a9bd-4c87846bc60a\",\n    \"title\": \"AFIA House Demo\",\n    \"content\": null,\n    \"category\": \"Upperhill\",\n    \"date\": \"2024-07-08\",\n    \"user\": \"d1e8452c-9f0d-4b8d-8d5d-8c9a27d09db8\"\n}"
-						}
-					]
+					"response": []
 				}
 			]
 		}
